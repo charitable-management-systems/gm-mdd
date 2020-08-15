@@ -1,0 +1,144 @@
+.header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    position: fixed;
+    height: 3.25rem;
+    padding: 0.75rem;
+    padding-top: 1.6rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(155,155,155, 0.3);
+    display: inline-flex;
+
+    .logo {
+        a {
+            display: inline-flex;
+            padding: 0;
+            text-decoration: none;
+        }
+        a > img {
+            padding: 0;
+            margin-left: 0.5rem;
+            margin-top: -1.25rem;
+        }
+    }
+
+    .menu {
+        width: 80%;
+        text-align: right;
+        padding-right: 20px;
+        margin-top: -10px;
+        padding-top: 0;
+        .menuIcon { display: none; }
+        .menuItem {
+            display: inline-flex;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #1773C3;
+            text-decoration: none;
+            font-size: 1.15rem;
+        }
+    }
+}
+
+@media all and (max-width: 1010px) {
+    .header {
+        .logo {
+            width: calc(100% - 50px);
+            a > h3 {
+                margin-top: 0rem;
+                font-size: 1rem;
+            }
+        }
+        .menu {
+            padding-right: 0px;
+            margin-top: -4px;
+            width: 50px;
+            .menuIcon {
+                display: block;
+                width: 30px;
+                height: 30px;
+                float: right;
+                margin-top: -0.5rem;
+                cursor: pointer;
+                * {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .menuItemList {
+                position: fixed;
+                right: -40%;
+                height: 100%;
+                width: 40%;
+                top: 3.25rem;
+                background-color: rgb(225,225,225);
+                border-top: 1px solid rgb(225,225,225);
+
+                &:first {
+                  border-top: none;
+                }
+
+                .menuItem {
+                    border-bottom: 1px solid rgba(155,155,155, 0.3);
+                    font-size: 0.8rem;
+                    text-align: center;
+                    width: 100%;
+                    padding: 0.7rem;
+                }
+            }
+
+            .menuItemList--active {
+                right: 0;
+                animation-duration: 300ms;
+                animation-name: slidein;
+            }
+
+            @keyframes slidein {
+                from {
+                  right: -40%;
+                }
+
+                to {
+                  right: 0%;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media all and (max-width: 563px) {
+    .header {
+        .logo {
+            a > img {
+                margin-left: 0.1rem;
+            }
+            a > h3 {
+                margin-left: 0.2rem;
+                margin-right: 0.2rem;
+                margin-top: -0.1rem;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 399px) {
+    .header {
+        .logo {
+            a > img {
+                margin-left: 0.1rem;
+            }
+            a > h3 {
+                margin-left: 0.2rem;
+                margin-right: 0.2rem;
+                margin-top: -0.1rem;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+    }
+}

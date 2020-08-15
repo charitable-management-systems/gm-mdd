@@ -8,8 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import terms from "../pdf/terms_of_use.pdf"
+import privacy from "../pdf/privacy_policy.pdf"
 
 import Header from "./header"
+import Hero from "./Hero"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -26,21 +29,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Hero />
+      <main>{children}</main>
+      <footer style={{borderTop: "1px solid black", padding: "0.25rem", paddingLeft: "0.5rem"}}>
+        <a href={privacy} target="_blank" style={{marginRight: "0.5rem"}}>Privacy Policy</a>
+        <a href={terms} target="_blank">Terms of Use</a>
+      </footer>
     </>
   )
 }

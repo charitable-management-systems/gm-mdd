@@ -5,7 +5,7 @@ import React from "react"
 const Donate = () => {
 	const data = useStaticQuery(graphql`
     {
-      allFile(filter: { extension: { eq: "pdf" } }) {
+      allFile(filter: { extension: { eq: "pdf" }, name: { in:["PledgeForm_GM_MDD","MDD_ACH_Debits"]} }) {
         edges {
           node {
             publicURL
@@ -15,12 +15,14 @@ const Donate = () => {
       }
     }
   `)
+  const pledgeForm = data.allFile.edges.find(({node}) => node.name === "PledgeForm_GM_MDD");
+  const achForm = data.allFile.edges.find(({node}) => node.name === "MDD_ACH_Debits");
   return (
   <div className="background-gm-blue">
     <div className="info-segment-content">
       <h1>Donate</h1>
       <p>Will you help support a student in beginning their career in automotive retail?<br/>
-        Complete and submit the <a href={data.allFile.edges[0].node.publicURL}>pledge form</a><br/>
+        Complete and submit the <a href={pledgeForm.node.publicURL}>pledge form</a> or support through automatic <a href={achForm.node.publicURL}>ACH donations</a><br/>
       Thank you for your support!</p>
 
       <p>100% of your donation will go directly to scholarship support.<br/>

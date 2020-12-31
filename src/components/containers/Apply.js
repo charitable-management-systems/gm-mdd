@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const notOpen = () => alert('The application process will be available September 15th');
+const notOpen = () => alert('The application process will be available January 1, 2021');
 
 const Apply = () => (
   <div class="background-gm-blue">
@@ -17,7 +17,7 @@ const Apply = () => (
       <p>To complete your application, you must then:</p>
       <ul>
         <li>Provide a letter of recommendation from one of the following: a past/current employer, academic instructor/school official or community/civic leader. Your letter of recommendation must be signed and on official letterhead.</li>
-        <li>Mail - or have your school mail - an official transcript from your most recent educational institution. If this does not include one full year of grades, please also provide a transcript from your previous institution(s).</li>
+        <li>Mail - or have your school mail - an official transcript from your most recent educational institution. If this does not include one full year of grades, please also provide a transcript from your previous institution(s). We accept electronic transcripts from services like Credentials Solutions or Parchment which should be e-mailed to info@gmmddscholarship.com</li>
         <li>Send a copy of your Student Aid Report (SAR) including your Expected Family Contribution (EFC) from the information you provided on you Free Application for Federal Student Aid (FAFSA).</li>
       </ul>
       <p><a href="#Contact">Contact information</a></p>

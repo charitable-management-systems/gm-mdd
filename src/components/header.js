@@ -4,7 +4,7 @@ import { Menu } from 'react-feather'
 import "./header.scss"
 import logo from "../images/MDD-logo.png"
 
-const notOpen = () => alert('The application process will be available September 30th');
+const notOpen = () => alert('The application process will be available January 1, 2021');
 
 class Header extends React.Component {
 

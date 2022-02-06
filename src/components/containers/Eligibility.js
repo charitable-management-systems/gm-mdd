@@ -11,7 +11,7 @@ const Eligibility = () => (
       degrees in automotive retail management and/or technical certification(s) in automotive technology are
       encouraged to apply. A limited number of scholarships will be awarded for the 2022-23 academic year.
       </p>
-      <p>The application deadline is April 1, 2022.</p>
+      <p>The application deadline is April 15, 2022.</p>
     </div>
     <div className="vertical-split">
       <div className="info-block">

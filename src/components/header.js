@@ -4,7 +4,7 @@ import { Menu } from 'react-feather'
 import "./header.scss"
 import logo from "../images/MDD-logo.png"
 
-const notOpen = () => alert('The application process will be available January 1, 2021');
+const notOpen = () => alert('The application deadline has passed, please check back in January 2023');
 
 class Header extends React.Component {
 
@@ -32,7 +32,7 @@ class Header extends React.Component {
                 <div className="menu">
                     <div className="menuIcon"><Menu onClick={this.toggleMenu} /></div>
                     <div className={this.menuClasses()}>
-                      {/*<a className="menuItem" onClick={notOpen} style={{'cursor': 'pointer'}}>Apply</a> */}
+                      {/* <a className="menuItem" onClick={notOpen} style={{'cursor': 'pointer'}}>Apply</a> */}
                         <a className="menuItem" href="https://apply.gmmddscholarship.com/application/login">Apply</a>
                         <a className="menuItem" onClick={this.toggleMenu}  href="#About">About</a>
                         <a className="menuItem" onClick={this.toggleMenu}  href="#Eligibility">Eligibility</a>

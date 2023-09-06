@@ -2,13 +2,13 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const notOpen = () => alert('The application process will be available January 1, 2021');
+const notOpen = () => alert('The application deadline has passed, please check back in January 2023');
 
 const Apply = () => (
   <div class="background-gm-blue">
     <div class="info-segment-content">
       <h1>Application Process</h1>
-      <p><a href="" onClick={notOpen} style={{'cursor': 'pointer'}}>Begin your application!</a></p><p>As part of the online application you will be required to upload a 500 – 750 word personal statement addressing the following:</p>
+      <p>{/*<a href="https://apply.gmmddscholarship.com/application/login">Begin your application!</a>*/}<a onClick={notOpen}>Begin your application!</a></p><p>As part of the online application you will be required to upload a 500 – 750 word personal statement addressing the following:</p>
       <ul>
         <li>Your interest and motivation to pursue a career in the automotive retail and/or automotive service sector.</li>
         <li>Why you should be considered for scholarship support.</li>

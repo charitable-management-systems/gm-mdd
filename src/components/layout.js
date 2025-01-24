@@ -15,7 +15,7 @@ import Header from "./header"
 import Hero from "./Hero"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ noHero = false, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Hero />
+      {!noHero && (<Hero />)}
       <main>{children}</main>
       <footer style={{borderTop: "1px solid black", padding: "0.25rem", paddingLeft: "0.5rem"}}>
         <a href={privacy} target="_blank" style={{marginRight: "0.5rem"}}>Privacy Policy</a>
